@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AutoClip AI Media helps creators turn long videos into short-form content.">
+  <title>AutoClip AI Media</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #090d19;
+      color: white;
+      line-height: 1.6;
+    }
+    header {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #263044;
+    }
+    .logo { font-size: 22px; font-weight: bold; }
+    .logo span { color: #21d4fd; }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .hero {
+      text-align: center;
+      padding: 110px 20px;
+      background: radial-gradient(
+        ellipse at top, #182b55, #090d19 70%
+      );
+    }
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    h1 span { color: #21d4fd; }
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #b8c2d8;
+      font-size: 19px;
+    }
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 10px;
+      background: #21d4fd;
+      color: #07111e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section { padding: 70px 8%; }
+    h2 { text-align: center; font-size: 34px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      margin-top: 40px;
+    }
+    .card {
+      padding: 28px;
+      border: 1px solid #26354d;
+      border-radius: 16px;
+      background: #121b2d;
+    }
+    .card h3 { color: #21d4fd; }
+    .card p { color: #b8c2d8; }
+    .center { text-align: center; }
+    footer {
+      padding: 30px 8%;
+      text-align: center;
+      border-top: 1px solid #263044;
+      color: #a8b4c9;
+    }
+    footer a { color: #21d4fd; margin: 0 10px; }
+    @media(max-width: 600px) {
+      header { flex-direction: column; gap: 12px; }
+      nav a { margin: 0 8px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">AutoClip <span>AI Media</span></div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Turn Long Videos Into<br>
+        <span>Viral-Ready Clips</span>
+      </h1>
+      <p>
+        AutoClip AI Media helps creators transform
+        long-form videos into engaging short-form
+        content for TikTok and Instagram.
+      </p>
+      <a class="button" href="#features">
+        Explore Features
+      </a>
+    </div>
+
+    <section id="features">
+      <h2>Powerful AI Video Tools</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>AI Highlight Detection</h3>
+          <p>
+            Identify engaging moments in longer
+            videos and turn them into short clips.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Vertical Video Formatting</h3>
+          <p>
+            Prepare clips for mobile-first viewing
+            on short-form video platforms.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Automatic Captions</h3>
+          <p>
+            Generate subtitles to make video
+            content easier to follow.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Social Media Publishing</h3>
+          <p>
+            Designed to support automated publishing
+            to authorized social media accounts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="center">
+      <h2>About AutoClip AI Media</h2>
+      <p>
+        AutoClip AI Media is an AI-powered video
+        clipping project focused on helping
+        content creators save editing time.
+      </p>
+      <p>
+        Our mission is to make short-form video
+        production faster, simpler, and more
+        accessible.
+      </p>
+    </section>
+
+    <section id="contact" class="center">
+      <h2>Connect With Us</h2>
+      <p>
+        We are developing tools for automated
+        video clipping and content publishing.
+      </p>
+      <p>
+        Publishing integrations are subject to
+        platform authorization and approval.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 AutoClip AI Media. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </p>
+  </footer>
+</body>
+</html>
