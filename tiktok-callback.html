@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connect TikTok | AutoClip AI</title>
+  <style>
+    body {
+      margin: 0;
+      background: #080e20;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .card {
+      max-width: 480px;
+      padding: 36px;
+      background: #141e35;
+      border-radius: 18px;
+    }
+    h1 { color: #22d3ee; }
+    p { line-height: 1.6; color: #cbd5e1; }
+    a { color: #22d3ee; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>AutoClip AI</h1>
+    <h2 id="status">TikTok Connection</h2>
+    <p id="message">Checking authorization response...</p>
+    <a href="./index.html">Return to Home</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get("error");
+    const code = params.get("code");
+    const state = params.get("state");
+
+    const status = document.getElementById("status");
+    const message = document.getElementById("message");
+
+    if (error) {
+      status.textContent = "Connection Not Completed";
+      message.textContent =
+        "TikTok authorization was declined or could not be completed.";
+    } else if (code && state) {
+      status.textContent = "Authorization Received";
+      message.textContent =
+        "TikTok returned an authorization response. " +
+        "Secure account linking is not yet enabled. " +
+        "Your account has not been connected.";
+    } else {
+      status.textContent = "TikTok Connection";
+      message.textContent =
+        "No authorization response was received.";
+    }
+
+    // Remove authorization parameters from the address bar.
+    window.history.replaceState(
+      {},
+      document.title,
+      window.location.pathname
+    );
+  </script>
+</body>
+</html>
